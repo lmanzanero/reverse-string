@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Reverse a string | Free Code Camp basic Algorithm</title>
+</head>
+<style>
+  body {
+    font-weight: lighter;
+    font-family: monospace;
+    font-size: 15px;
+    color: grey;
+    text-align: center;
+  }
+
+  .container{
+    margin: 0 auto;
+    padding: 10px;
+    background: purple;
+    width: 90%;
+    box-sizing: border-box;
+  }
+
+  input[type=text] {
+    width: 200px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+</style>
+<body>
+  <div class="container">
+    <h3>Reverse a string | Free Code Camp basic Algorithm</h3>
+    <form class="mainForm">
+     <input class="inputVal" type="text" value="" placeholder="Enter a word">
+   </form>
+   <div class="result">
+     <p>Lorem ipsum dolor sit amet, consectetur.</p>
+   </div>
+  </div>
+  <script type="text/javascript">
+    let inputVal = document.querySelector('.inputVal');
+    let form = document.querySelector('.mainForm');
+
+    function getInputVal(e){
+      e.preventDefault();
+      console.log(e);
+    }
+
+    form.addEventListener('oninput', getInputVal);
+
+  </script>
+</body>
+</html>
