@@ -57,10 +57,10 @@ input[type=text]:focus {
 
     function getInputVal(e){
       e.preventDefault();
-      console.log(e);
+      console.log(inputVal.value);
     }
 
-    form.addEventListener('oninput', getInputVal);
+    form.addEventListener('input', getInputVal);
 
   </script>
 </body>
