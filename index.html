@@ -10,7 +10,7 @@
   body {
     font-weight: lighter;
     font-family: monospace;
-    font-size: 15px;
+    font-size: 20px;
     color: grey;
     text-align: center;
   }
@@ -40,27 +40,52 @@
 input[type=text]:focus {
     width: 100%;
 }
+
+.result{
+  /*background-color: rgba(255, 111, 222, 0.2);*/
+  margin: 4px;
+  width: 100%;
+}
+
+.result p {
+  font-size: 35px;
+  margin: 0 auto;
+  padding: 30px;
+  color: #fff;
+}
+
+footer p {
+  font-size: 15px;
+}
 </style>
 <body>
   <div class="container">
-    <h3>Reverse a string | Free Code Camp basic Algorithm</h3>
-    <form class="mainForm">
-     <input class="inputVal" type="text" value="" placeholder="Enter a word">
-   </form>
+    <h3>Reverse a string</h3>
+
+     <input class="input" type="text" value="" placeholder="Enter a word">
+
    <div class="result">
-     <p>Lorem ipsum dolor sit amet, consectetur.</p>
+
    </div>
+   <footer>
+     <p>| Free Code Camp basic Algorithm |<p>
+   </footer>
   </div>
   <script type="text/javascript">
-    let inputVal = document.querySelector('.inputVal');
-    let form = document.querySelector('.mainForm');
-
-    function getInputVal(e){
-      e.preventDefault();
-      console.log(inputVal.value);
+    let input = document.querySelector('.input');
+    let resultDiv = document.querySelector('.result');
+    function getInputVal(){
+      let inputVal = input.value;
+      reverseString(inputVal);
     }
 
-    form.addEventListener('input', getInputVal);
+    function reverseString(inputVal){
+      let reversedString = inputVal.split('');
+      reversedString.reverse();
+      resultDiv.innerHTML = `<p>${reversedString.join('')}</p>`;
+    }
+
+    input.addEventListener('input', getInputVal);
 
   </script>
 </body>
